@@ -19,6 +19,7 @@ if grep -q 'Seccomp:.0' /proc/1/status; then
   --user-data-dir \
   --disable-session-crashed-bubble \
   --hide-crash-restore-bubble \
+  --force-dark-mode \
    "$@" > /dev/null 2>&1
 else
   ${BIN} \
@@ -33,5 +34,6 @@ else
   --user-data-dir \
   --disable-session-crashed-bubble \
   --hide-crash-restore-bubble \
+  --force-dark-mode \
    "$@" > /dev/null 2>&1
 fi
