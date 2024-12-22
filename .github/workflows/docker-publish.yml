@@ -9,12 +9,15 @@ on:
   schedule:
     - cron: '27 16 * * *'
   push:
-    branches: [ "master" ]
+    branches: 
+      - "master"
+      - "vivaldi" # Hinzugefügt: Branch "vivaldi"
     # Publish semver tags as releases.
     tags: [ 'v*.*.*' ]
   pull_request:
-    branches: [ "master" ]
-
+    branches: 
+      - "master"
+      - "vivaldi" # Hinzugefügt: Pull Requests für "vivaldi"
 env:
   # Use docker.io for Docker Hub if empty
   REGISTRY: ghcr.io
