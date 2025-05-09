@@ -14,13 +14,6 @@ RUN \
   curl -o \
     /kclient/public/icon.png \
     https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/chromium-logo.png && \
-  echo "**** install packages ****" && \
-  apt-get update && \
-  apt-get install -y --no-install-recommends \
-    chromium \
-    chromium-l10n && \
-  echo "**** cleanup ****" && \
-  apt-get autoclean && \
   rm -rf \
     /config/.cache \
     /var/lib/apt/lists/* \
